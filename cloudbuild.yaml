@@ -54,6 +54,8 @@ steps:
               targetPort: 8080
           selector:
             app: $_PROJECT_NAME
+          type:
+            LoadBalancer
         EOF
         cat <<EOF | kubectl apply -f -
         apiVersion: apps/v1
