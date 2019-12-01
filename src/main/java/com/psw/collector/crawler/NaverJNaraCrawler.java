@@ -39,6 +39,7 @@ public class NaverJNaraCrawler {
 		options.addArguments("disable-gpu");
 		options.addArguments("window-size=1920x1080");
 		options.addArguments("lang=ko_KR");
+		options.addArguments("--blink-settings=imagesEnabled=false");//image do not download
 		driver = new ChromeDriver(options);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("Object.defineProperty(navigator, 'plugins', {get: function() {return[1, 2, 3, 4, 5];},});");
